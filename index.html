@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>UniNear - 학교 주변 생활 가이드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 data-i18n="appTitle">UniNear</h1>
+            <select id="lang-selector" class="lang-selector">
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="zh">🇨🇳 中文</option>
+            </select>
+        </header>
+
+        <!-- Map Placeholder Area -->
+        <div class="map-container">
+            <div class="map-pin">📍</div>
+        </div>
+
+        <!-- Scrollable Content Area -->
+        <div class="content-area">
+            <!-- Category Filter -->
+            <div class="categories" id="category-container">
+                <!-- Categories will be injected here via JS -->
+            </div>
+
+            <!-- List of Facilities -->
+            <div class="facility-list" id="facility-list">
+                <!-- Facility cards will be injected here via JS -->
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label" data-i18n="navHome">홈</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-label" data-i18n="navMap">지도</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🔖</span>
+                <span class="nav-label" data-i18n="navSaved">저장됨</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label" data-i18n="navProfile">내 정보</span>
+            </div>
+        </nav>
+
+        <!-- Detail Modal -->
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-handle"></div>
+                <button class="modal-close" id="modal-close">×</button>
+                <div id="modal-content-area" style="flex: 1; display: flex; flex-direction: column; padding-top: 10px;">
+                    <!-- Content injected by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
